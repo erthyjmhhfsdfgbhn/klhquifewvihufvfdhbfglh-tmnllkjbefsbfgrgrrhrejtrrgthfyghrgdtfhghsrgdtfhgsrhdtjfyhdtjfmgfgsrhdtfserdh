@@ -195,7 +195,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === 'باكستان') {      
-    msg.channel.send("PK")
+    msg.channel.send(":flag_pk:")
   }
 });
 
