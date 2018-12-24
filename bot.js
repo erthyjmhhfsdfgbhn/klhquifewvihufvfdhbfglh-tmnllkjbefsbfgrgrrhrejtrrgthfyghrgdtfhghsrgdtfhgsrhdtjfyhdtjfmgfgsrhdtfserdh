@@ -218,7 +218,7 @@ client.on('message', msg => {
 });
 
 client.on('ready',  () => {
-  console.log('By : iTzAnan_Over');
+  console.log('By :c0PRa');
   console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
   console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
   console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
@@ -235,7 +235,7 @@ if(message.content.split(' ')[0] == '$bc') {
     .setColor("#FF00FF")
     .setThumbnail(message.author.avatarURL)   
                                       .addField('تم الارسال بواسطة :', "<@" + message.author.id + ">")
-                           message.channel.send(${message.guild.members.filter(m => m.presence.status !== 'all').size}$: عدد الاعضاء المستلمين); 
+                           message.channel.send(${message.guild.members.filter(m => m.presence.status !== 'all').size}$): عدد الاعضاء المستلمين); 
                  message.channel.sendEmbed(embed);
         message.guild.members.forEach(m => {
             var bc = new Discord.RichEmbed()
@@ -247,7 +247,6 @@ if(message.content.split(' ')[0] == '$bc') {
         });
     }
 })
-
 
 
 
