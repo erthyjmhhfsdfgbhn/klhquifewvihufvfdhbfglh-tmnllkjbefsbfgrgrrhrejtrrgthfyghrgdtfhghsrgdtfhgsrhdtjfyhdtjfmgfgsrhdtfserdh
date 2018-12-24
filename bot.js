@@ -200,11 +200,22 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'بحرين') {      
+  if (msg.content === 'البحرين') {      
     msg.channel.send(":flag_bh:")
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'الكويت') {      
+    msg.channel.send(":flag_kw:")
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'الاردن') {      
+    msg.channel.send(":flag_jo:")
+  }
+});
 
 
 client.login(process.env.BOT_TOKEN);
