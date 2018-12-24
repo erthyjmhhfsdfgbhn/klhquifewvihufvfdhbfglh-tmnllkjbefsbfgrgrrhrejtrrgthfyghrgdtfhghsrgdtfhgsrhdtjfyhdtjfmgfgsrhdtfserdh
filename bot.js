@@ -218,5 +218,17 @@ client.on('message', msg => {
 });
 
 
+client.on('message',function(message) {
+  if(!message.channel.guild) return undefined;
+  const swearWords = ["شرموطه","زبي","انيك","قحبه","نيك","زب","كس"];
+  if (swearWords.some(word => message.content.includes(word)) ) {
+    message.delete()
+    message.reply("ممنوع السب"); 
+  }
+});
+
+
+
+
 
 client.login(process.env.BOT_TOKEN);
