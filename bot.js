@@ -219,7 +219,7 @@ client.on('message', msg => {
 
 client.on("message", message => {
 
-            if (message.content.startsWith($ + "bc")) {  ///الامر
+            if (message.content.startsWith(prefix + "bc")) {  ///الامر
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
