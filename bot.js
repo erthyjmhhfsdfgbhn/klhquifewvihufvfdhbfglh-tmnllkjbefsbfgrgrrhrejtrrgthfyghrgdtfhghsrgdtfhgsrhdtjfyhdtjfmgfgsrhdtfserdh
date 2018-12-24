@@ -236,6 +236,7 @@ if(message.content.split(' ')[0] == '$bc') {
     .setColor("#FF00FF")
     .setThumbnail(message.author.avatarURL)   
                                       .addField('تم الارسال بواسطة :', "<@" + message.author.id + ">")
+                           message.channel.send(${message.guild.members.filter(m => m.presence.status !== 'all').size}: عدد الاعضاء المستلمين); 
                  message.channel.sendEmbed(embed);
         message.guild.members.forEach(m => {
             var bc = new Discord.RichEmbed()
@@ -247,8 +248,6 @@ if(message.content.split(' ')[0] == '$bc') {
         });
     }
 })
-
-
 
 
 client.login(process.env.BOT_TOKEN);
