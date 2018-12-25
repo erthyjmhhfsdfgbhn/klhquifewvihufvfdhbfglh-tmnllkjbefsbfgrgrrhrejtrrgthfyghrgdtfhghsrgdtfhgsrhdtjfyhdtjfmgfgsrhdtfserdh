@@ -271,7 +271,7 @@ client.on('message', function(msg) {
       msg.channel.send({embed:embed});
     }
   });
-=================================================================
+==============================================================
  client.on('message', message => {
     if (message.content.startsWith("$avatar")) {
         var mentionned = message.mentions.users.first();
@@ -322,7 +322,7 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 
   }
 });
-================================================================
+=============================================================
 const Sra7a = [
     'صراحه  |  صوتك حلوة؟',
     'صراحه  |  التقيت الناس مع وجوهين؟',
@@ -398,7 +398,7 @@ if (message.content.startsWith('.truth')) {
   message.react("??")
 }
 });
-=========================================================================
+======================================================================
 const cuttweet = [
      'كت تويت ‏| تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟',
      'كت تويت | أكثر شيء يُسكِت الطفل برأيك؟',
@@ -441,7 +441,7 @@ if (message.content.startsWith('$cuttweet')) {
   console.log('[id] Send By: ' + message.author.username)
     }
 });
-===========================================================================
+========================================================================
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -456,7 +456,7 @@ client.on('message', message => {
    message.delete()
   }
  });
-============================================================================
+=========================================================================
 client.on('message', message => {
    let embed = new Discord.RichEmbed()
 
@@ -479,7 +479,7 @@ let embed = new Discord.RichEmbed()
         });
     }
 });
-==========================================================================
+=======================================================================
 client.on('message', message => {
     if(message.content == '.members') {
     const embed = new Discord.RichEmbed()
