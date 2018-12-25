@@ -889,7 +889,7 @@ client.on('message', async msg => {
   }
 });
 
-#:)
+
 
 var prefix = "-";//$
 client.on("message", message => {
