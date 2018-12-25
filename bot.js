@@ -355,7 +355,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if(message.channel.type === "dm") return;
-      if(message.content.startsWith ("$marry")) {
+      if(message.content.startsWith ("$زواج")) {
       if(!message.channel.guild) return message.reply(' This command only for servers ')
       var proposed = message.mentions.members.first()
 
@@ -450,7 +450,7 @@ const Sra7a = [
     'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
 ]
   client.on('message', message => {
-if (message.content.startsWith('.truth')) {
+if (message.content.startsWith('$صراحه')) {
     if(!message.channel.guild) return message.reply('** This command only for servers **');
  var client= new Discord.RichEmbed()
  .setTitle("لعبة صراحة ..")
