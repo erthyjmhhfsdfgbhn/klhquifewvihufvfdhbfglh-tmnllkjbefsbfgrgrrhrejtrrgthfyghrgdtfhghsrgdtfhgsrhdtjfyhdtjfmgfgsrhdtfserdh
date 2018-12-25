@@ -218,16 +218,6 @@ client.on('message', msg => {
 });
 
 
-client.on('message',function(message) {
-  if(!message.channel.guild) return undefined;
-  const swearWords = ["شرموطه","زبي","انيك","قحبه","نيك","زب","كس"];
-  if (swearWords.some(word => message.content.includes(word)) ) {
-    message.delete()
-    message.reply("ممنوع السب"); 
-  }
-});
-
-
  
 
 client.on("guildMemberAdd", member => {
@@ -507,6 +497,36 @@ if (message.content.startsWith('$كت تويت')) {
   console.log('[id] Send By: ' + message.author.username)
     }
 });
+
+client.on('ready',  () => {
+  console.log('By : c0PRa');
+  console.log(Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]);
+  console.log(Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]);
+  console.log(Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]);
+});
+client.on('message', message => {
+   let embed = new Discord.RichEmbed()
+
+    let args = message.content.split(' ').slice(1).join(' ');
+     if(!message.channel.guild) return;
+if(message.content.split(' ')[0] == '$bc') {
+    if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+         message.react(":heavy_check_mark:️")
+          let embed = new Discord.RichEmbed()
+    .setColor("#FF00FF")
+    .setThumbnail(message.author.avatarURL)
+                                      .addField('تم الارسال بواسطة :', "<@" + message.author.id + ">")
+                 message.channel.sendEmbed(embed);
+        message.guild.members.forEach(m => {
+            var bc = new Discord.RichEmbed()
+.addField('● Sender  :', *** → ${message.author.username}#${message.author.discriminator}***)
+            .addField('● Server  :', *** → ${message.guild.name}***)
+    .setColor('#ff0000')
+                 .addField('ّ', args)
+            m.send(``,{embed: bc});
+        });
+    }
+})
 
 
 
