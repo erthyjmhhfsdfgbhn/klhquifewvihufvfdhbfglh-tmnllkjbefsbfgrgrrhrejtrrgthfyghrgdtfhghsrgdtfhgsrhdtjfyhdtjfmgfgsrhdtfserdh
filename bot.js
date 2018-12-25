@@ -879,6 +879,16 @@ client.on('guildDelete', guild => {
  
 });
 
+client.on('message', async msg => {
+  if(msg.content.startsWith('$servers')) {
+    let output = '**Servers**\n';
+    client.guilds.forEach(guild => {
+      output += `**Name**: ${guild.name}, **ID**: ${guild.id}, **MembersCount**: ${guild.memberCount}, **Owner**: ${guild.owner}`;
+    });
+    msg.channel.send(output);
+  }
+});
+
 
 
 client.login(process.env.BOT_TOKEN);
