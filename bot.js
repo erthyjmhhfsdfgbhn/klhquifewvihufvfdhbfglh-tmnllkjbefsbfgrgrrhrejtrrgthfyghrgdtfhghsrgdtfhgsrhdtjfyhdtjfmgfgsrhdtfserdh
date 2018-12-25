@@ -523,6 +523,21 @@ if(message.content.split(' ')[0] == '$bc') {
 })
 
 
+client.on('message', message => {
+    if(message.content == '$members') {
+    const embed = new Discord.RichEmbed()
+    .setDescription(`
+**   📗  online:  **__${message.guild.members.filter(m=>m.presence.status == 'online').size}__
+**   📕  dnd:      **__${message.guild.members.filter(m=>m.presence.status == 'dnd').size}__
+**   📙  idle:     **__${message.guild.members.filter(m=>m.presence.status == 'idle').size} __
+**   📓  offline:  **__${message.guild.members.filter(m=>m.presence.status == 'offline').size}__
+**   🔖  all: **__${message.guild.memberCount}__`)
+
+         message.channel.send({embed});
+
+    }
+  });
+
 
 
 
