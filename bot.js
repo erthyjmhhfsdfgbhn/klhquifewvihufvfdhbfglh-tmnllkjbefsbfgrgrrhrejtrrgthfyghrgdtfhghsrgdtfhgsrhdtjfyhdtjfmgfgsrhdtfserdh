@@ -528,7 +528,7 @@ client.on('message', message => {
   if (!message.content.startsWith("$say")) return;
 
   let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
+  command = command.slice($say);
 
   let args = message.content.split(" ").slice(1);
 
