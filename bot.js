@@ -251,9 +251,11 @@ client.on('message', async msg => {
   }
 });
 
-var p = "$";
+
+
 client.on('message', message => {
-         if (message.content === $ + "time") {
+var prefix = $
+         if (message.content === prefix + "time") {
          if (!message.channel.guild) return message.reply('** This command only for servers **');  
          var currentTime = new Date(),
             hours = currentTime.getHours() + 4 ,
