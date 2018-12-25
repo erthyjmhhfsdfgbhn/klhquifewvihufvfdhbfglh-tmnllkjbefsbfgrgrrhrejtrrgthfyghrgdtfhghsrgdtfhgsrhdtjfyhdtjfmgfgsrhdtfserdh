@@ -353,12 +353,6 @@ client.on('message', message => {
     }
 });
 
-client.on('ready',  () => {
-  console.log('By : c0PRa');
-  console.log(Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]);
-  console.log(Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]);
-  console.log(Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]);
-});
 client.on('message', message => {
    let embed = new Discord.RichEmbed()
 
