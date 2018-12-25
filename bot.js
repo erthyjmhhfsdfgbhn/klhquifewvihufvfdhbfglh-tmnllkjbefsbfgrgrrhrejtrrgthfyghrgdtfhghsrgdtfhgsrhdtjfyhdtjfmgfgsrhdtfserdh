@@ -498,6 +498,7 @@ if (message.content.startsWith('$كت تويت')) {
     }
 });
 
+
 client.on('ready',  () => {
   console.log('By : c0PRa');
   console.log(Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]);
@@ -511,7 +512,7 @@ client.on('message', message => {
      if(!message.channel.guild) return;
 if(message.content.split(' ')[0] == '$bc') {
     if (!message.member.hasPermission("ADMINISTRATOR"))  return;
-         message.react(":heavy_check_mark:️")
+         message.react("heavy_check_mark️")
           let embed = new Discord.RichEmbed()
     .setColor("#FF00FF")
     .setThumbnail(message.author.avatarURL)
@@ -519,15 +520,14 @@ if(message.content.split(' ')[0] == '$bc') {
                  message.channel.sendEmbed(embed);
         message.guild.members.forEach(m => {
             var bc = new Discord.RichEmbed()
-.addField('● Sender  :', *** → ${message.author.username}#${message.author.discriminator}***)
-            .addField('● Server  :', *** → ${message.guild.name}***)
+.addField('● Sender  :',  → ${message.author.username}#${message.author.discriminator})
+            .addField('● Server  :',  → ${message.guild.name})
     .setColor('#ff0000')
                  .addField('ّ', args)
             m.send(``,{embed: bc});
         });
     }
 })
-
 
 
 
