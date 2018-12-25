@@ -525,7 +525,7 @@ if(message.content.split(' ')[0] == '$bc') {
 
 client.on('message', message => {
   if (message.author.bot) return;
-  if (!message.content.startsWith('$say')) return;
+  if (!message.content.startsWith($say)) return;
 
   let command = message.content.split(" ")[0];
   command = command.slice($say);
