@@ -222,8 +222,8 @@ client.on('message', msg => {
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(`ولكم نورت السيرفر
- ${member}  
+  return channel.send(` لبى من دخل
+${member}  
  `) 
 }).catch(console.error)
 });
