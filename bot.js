@@ -87,9 +87,9 @@ client.on("message", (message) => {
   if (message.content.startsWith("$close")) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
-        message.channel.send(`هل أنت متأكد؟ بعد التأكيد ، لا يمكنك عكس هذا الإجراء!\n للتأكيد ، اكتب\`$confirm\`. سيؤدي ذلك إلى مهلة زمنية في غضون 10 ثوانٍ وإلغائها`)
+        message.channel.send(`هل أنت متأكد؟ بعد التأكيد ، لا يمكنك عكس هذا الإجراء!\n للتأكيد ، اكتب\`$ok\`. سيؤدي ذلك إلى مهلة زمنية في غضون 10 ثوانٍ وإلغائها`)
             .then((m) => {
-                message.channel.awaitMessages(response => response.content === '$confirm', {
+                message.channel.awaitMessages(response => response.content === '$ok', {
                         max: 1,
                         time: 10000,
                         errors: ['time'],
