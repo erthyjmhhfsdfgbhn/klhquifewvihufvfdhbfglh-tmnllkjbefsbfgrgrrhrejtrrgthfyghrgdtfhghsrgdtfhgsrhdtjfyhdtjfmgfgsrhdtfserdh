@@ -345,4 +345,4 @@ if (message.content.toLowerCase().startsWith(prefix + `close`)) {
 
 });
 
-client.login('NDcwMDk5MjM0ODc2ODE3NDA4.D3GK_Q.-ywrIeX1VBiaT2h9o00AN4jHlDo');
+client.login('BOT_TOKEN');
