@@ -7,7 +7,7 @@ const moment = require('moment');
 const dateFormat = require('dateformat');
 let done = {};
 
-client.on('ready', () => {
+client.on('ready', ($) => {
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setGame(`Gameing Server `,"http://twitch.tv/S-F")
   console.log('')
