@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "$";
+const prefix = "8";
 
 client.on('ready', () => { // لما يشتغل
-  client.user.setGame("Mine_3RB", "https://www.twitch.tv/alpha");
+  client.user.setGame("YB's Community", "https://www.twitch.tv/alpha");
   console.log(`Logged in as [ ${client.user.tag}! ]`);
 });
 
