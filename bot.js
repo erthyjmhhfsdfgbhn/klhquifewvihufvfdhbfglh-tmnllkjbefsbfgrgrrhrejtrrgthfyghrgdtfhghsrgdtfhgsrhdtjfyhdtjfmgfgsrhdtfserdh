@@ -227,15 +227,6 @@ client.on('message', message => { // برودكاست
     });
 
 
-client.on('ready', () => { // رتبة رانبو
-    setInterval(function(){
-        client.guilds.get('543732859278721026')roles.find('name', '• VIP').edit({color: 'RANDOM'})
-    },20000);
-
-
-})
-
-
 client.on('message', message => { // معلومات الشخص
 var args = message.content.split(" ").slice(1);
 if(message.content.startsWith(prefix + 'id')) {
