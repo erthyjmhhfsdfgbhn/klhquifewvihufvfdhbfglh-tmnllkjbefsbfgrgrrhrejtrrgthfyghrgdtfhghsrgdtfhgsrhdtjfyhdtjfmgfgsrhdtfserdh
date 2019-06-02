@@ -229,7 +229,7 @@ client.on('message', message => { // برودكاست
 
 client.on('ready', () => { // رتبة رانبو
     setInterval(function(){
-        client.guilds.get('543732859278721026').roles.find('name', '• VIP').edit({color: 'RANDOM'})
+        client.guilds.get('543732859278721026')roles.find('name', '• VIP').edit({color: 'RANDOM'})
     },20000);
 
 
