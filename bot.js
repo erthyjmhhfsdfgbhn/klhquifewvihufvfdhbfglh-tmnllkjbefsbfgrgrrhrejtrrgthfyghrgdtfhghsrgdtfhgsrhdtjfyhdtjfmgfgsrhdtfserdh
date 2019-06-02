@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "8";
+const prefix = "$";
 
 client.on('ready', () => { // لما يشتغل
   client.user.setGame("Mine_3RB", "https://www.twitch.tv/alpha");
@@ -31,7 +31,7 @@ client.on('message', message => { // اقتراح
 });
 
 client.on("message", message => { // تقديم اداره
-  if(message.content.startsWith("8تقديم")) {
+  if(message.content.startsWith("$تقديم")) {
         if(!message.channel.guild) return;
                 if(message.author.bot) return;
         let channel = message.guild.channels.find("name", "●-التقديم-عاداره")
@@ -110,7 +110,7 @@ client.on("message", message => { // تقديم اداره
     client.on('message',async message => {
   let mention = message.mentions.members.first();
   let mySupport = message.guild.roles.find('name','• Mod');
-  if(message.content.startsWith("8قبول")) {
+  if(message.content.startsWith("$قبول")) {
     let acRoom = message.guild.channels.find('name', '●-قبول-او-رفض');
     if(acRoom) {
     if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return;
@@ -125,7 +125,7 @@ client.on("message", message => { // تقديم اداره
 
 client.on('message',async message => {
   let mention = message.mentions.members.first();
-  if(message.content.startsWith("8رفض")) {
+  if(message.content.startsWith("$رفض")) {
   if(!message.channel.guild) return;
   let acRoom = message.guild.channels.find('name', '●-قبول-او-رفض');
   if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return;
@@ -137,7 +137,7 @@ client.on('message',async message => {
 
 client.on('message', message => { // اغلاق الروم و فتحه
 
-    if (message.content === "8mutechannel") {
+    if (message.content === "$mutechannel") {
                         if(!message.channel.guild) return message.reply(' This command only for servers');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -148,7 +148,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
                message.reply("تم تقفيل الشات :white_check_mark: ")
            });
              }
-if (message.content === "8unmutechannel") {
+if (message.content === "$unmutechannel") {
     if(!message.channel.guild) return message.reply(' This command only for servers');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
