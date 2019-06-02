@@ -345,4 +345,4 @@ if (message.content.toLowerCase().startsWith(prefix + `close`)) {
 
 });
 
-client.login('BOT_TOKEN');
+client.login(process.env.BOT_TOKEN);
