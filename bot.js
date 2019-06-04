@@ -213,7 +213,7 @@ client.on('message', message => { // برودكاست
        .addField('Sender', message.author.username)
        .addField('Message', args)
        .setThumbnail(message.author.avatarURL)
-       .setFooter(copy, client.user.avatarURL);
+       .setFooter(client.user.avatarURL);
     m.send({ embed: bc })
     msg.delete();
     })
